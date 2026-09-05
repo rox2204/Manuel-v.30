@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>MANUEL // v.30</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,7 +23,9 @@
 
     body {
       min-height: 100vh;
+
       color: #fff;
+
       font-family: Arial, Helvetica, sans-serif;
 
       background-image:
@@ -38,6 +42,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       padding: 25px;
     }
 
@@ -53,69 +58,97 @@
       background: rgba(0, 0, 0, 0.50);
 
       border: 1px solid rgba(255, 255, 255, 0.20);
+
       border-radius: 16px;
 
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
 
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
     }
 
     h1 {
       font-size: clamp(50px, 12vw, 85px);
+
       font-weight: 400;
+
       letter-spacing: 10px;
+
       margin-bottom: 12px;
     }
 
     .version {
       color: rgba(255, 255, 255, 0.65);
+
       font-family: monospace;
+
       font-size: 17px;
+
       letter-spacing: 3px;
+
       margin-bottom: 28px;
     }
 
     .date {
       color: rgba(255, 255, 255, 0.75);
+
       font-family: monospace;
+
       font-size: 13px;
+
       margin-bottom: 42px;
     }
 
     .access {
       width: 100%;
+
       max-width: 350px;
+
       margin: 0 auto;
+
       text-align: left;
     }
 
     label {
       display: block;
+
       color: rgba(255, 255, 255, 0.60);
+
       font-family: monospace;
+
       font-size: 11px;
+
       letter-spacing: 2px;
+
       margin-bottom: 8px;
     }
 
     input {
       width: 100%;
+
       padding: 14px 15px;
+
       margin-bottom: 20px;
 
       background: rgba(255, 255, 255, 0.08);
+
       border: 1px solid rgba(255, 255, 255, 0.22);
+
       border-radius: 7px;
 
       color: #fff;
+
       font-family: monospace;
+
       font-size: 14px;
+
       outline: none;
     }
 
     input:focus {
       border-color: rgba(255, 255, 255, 0.65);
+
       background: rgba(255, 255, 255, 0.12);
     }
 
@@ -125,40 +158,56 @@
 
     .enter {
       display: block;
+
       width: 100%;
+
       padding: 14px;
+
       margin-top: 5px;
 
       background: transparent;
+
       border: 1px solid rgba(255, 255, 255, 0.45);
+
       border-radius: 7px;
 
       color: #fff;
+
       font-family: monospace;
+
       font-size: 13px;
+
       letter-spacing: 2px;
 
       cursor: pointer;
+
       transition: all 0.3s ease;
     }
 
     .enter:hover {
       background: #fff;
+
       color: #000;
+
       border-color: #fff;
     }
 
     .message {
       min-height: 18px;
+
       margin-top: 15px;
 
       color: rgba(255, 255, 255, 0.65);
+
       font-family: monospace;
+
       font-size: 11px;
+
       text-align: center;
     }
 
     @media (max-width: 600px) {
+
       body {
         padding: 15px;
       }
@@ -170,9 +219,12 @@
       h1 {
         letter-spacing: 6px;
       }
+
     }
+
   </style>
 </head>
+
 
 <body>
 
@@ -190,6 +242,7 @@
         15.08.1996 — 15.08.2026
       </div>
 
+
       <div class="access">
 
         <label for="name">
@@ -202,6 +255,7 @@
           placeholder="your name..."
         >
 
+
         <label for="code">
           ACCESS CODE
         </label>
@@ -212,11 +266,20 @@
           placeholder="••••••••"
         >
 
-        <button class="enter" type="button" onclick="enterSite()">
+
+        <button
+          class="enter"
+          type="button"
+          onclick="enterSite()"
+        >
           [ ENTER ]
         </button>
 
-        <div class="message" id="message"></div>
+
+        <div
+          class="message"
+          id="message"
+        ></div>
 
       </div>
 
@@ -224,28 +287,54 @@
 
   </div>
 
+
   <script>
+
     function enterSite() {
 
-      const name = document.getElementById("name").value.trim();
-      const code = document.getElementById("code").value;
-      const message = document.getElementById("message");
+      const name =
+        document
+          .getElementById("name")
+          .value
+          .trim()
+          .toLowerCase();
 
-      if (name === "manuel.30" && code === "padel30años") {
+      const code =
+        document
+          .getElementById("code")
+          .value;
 
-        message.textContent = "> ACCESS GRANTED.";
+      const message =
+        document
+          .getElementById("message");
+
+
+      if (
+        name === "manuel.30" &&
+        code === "padel30años"
+      ) {
+
+        message.textContent =
+          "> ACCESS GRANTED.";
 
         setTimeout(function() {
-          window.location.href = "./home.html";
+
+          window.location.href =
+            "https://rox2204.github.io/Manuel-v.30/home.html";
+
         }, 500);
 
       } else {
 
-        message.textContent = "> ACCESS DENIED.";
+        message.textContent =
+          "> ACCESS DENIED.";
 
       }
+
     }
+
   </script>
 
 </body>
+
 </html>

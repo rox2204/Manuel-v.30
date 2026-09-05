@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MANUEL // v3.0</title>
+  <title>MANUEL // v.30</title>
 
   <style>
     * {
@@ -13,160 +13,185 @@
       padding: 0;
     }
 
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
     body {
       min-height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
       color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
 
       background-image:
-        linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+        linear-gradient(
+          rgba(0, 0, 0, 0.42),
+          rgba(0, 0, 0, 0.42)
+        ),
         url("def71b1c-21f0-4749-a8be-adaf8b333e83.jpg");
 
-      background-size: 100% auto;
+      background-size: cover;
+
+      /* AQUÍ centramos la foto */
       background-position: center center;
+
       background-repeat: no-repeat;
+      background-attachment: fixed;
 
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+
+      padding: 25px;
     }
 
     .container {
       width: 100%;
-      max-width: 620px;
+      max-width: 600px;
       text-align: center;
     }
 
     .terminal {
       padding: 55px 40px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 18px;
 
-      /* Negro transparente */
-      background: rgba(0, 0, 0, 0.68);
+      background: rgba(0, 0, 0, 0.62);
 
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      border-radius: 16px;
 
-      box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.45);
-    }
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
 
-    .small {
-      color: rgba(255, 255, 255, 0.55);
-      font-family: monospace;
-      font-size: 12px;
-      letter-spacing: 4px;
-      margin-bottom: 25px;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
     }
 
     h1 {
-      font-size: clamp(48px, 12vw, 86px);
-      letter-spacing: 10px;
+      font-size: clamp(50px, 12vw, 85px);
       font-weight: 400;
+      letter-spacing: 10px;
+
       margin-bottom: 12px;
     }
 
     .version {
       color: rgba(255, 255, 255, 0.65);
+
       font-family: monospace;
-      font-size: 15px;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
+      font-size: 17px;
+      letter-spacing: 3px;
+
+      margin-bottom: 28px;
     }
 
     .date {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.75);
+
       font-family: monospace;
       font-size: 13px;
-      margin-bottom: 38px;
+
+      margin-bottom: 42px;
     }
 
     .access {
-      text-align: left;
-      max-width: 360px;
+      width: 100%;
+      max-width: 350px;
       margin: 0 auto;
+
+      text-align: left;
     }
 
     label {
       display: block;
-      color: rgba(255, 255, 255, 0.55);
+
+      color: rgba(255, 255, 255, 0.60);
+
       font-family: monospace;
       font-size: 11px;
       letter-spacing: 2px;
+
       margin-bottom: 8px;
     }
 
     input {
       width: 100%;
+
       padding: 14px 15px;
       margin-bottom: 20px;
 
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 7px;
 
-      color: white;
+      color: #fff;
+
       font-family: monospace;
       font-size: 14px;
 
       outline: none;
+
       transition: 0.3s;
     }
 
     input:focus {
       border-color: rgba(255, 255, 255, 0.65);
+
       background: rgba(255, 255, 255, 0.12);
     }
 
     input::placeholder {
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.30);
     }
 
     .enter {
       width: 100%;
+
       padding: 14px;
 
       margin-top: 5px;
 
       background: transparent;
+
       border: 1px solid rgba(255, 255, 255, 0.45);
       border-radius: 7px;
 
-      color: white;
+      color: #fff;
+
       font-family: monospace;
       font-size: 13px;
       letter-spacing: 2px;
 
       cursor: pointer;
+
       transition: all 0.3s ease;
     }
 
     .enter:hover {
-      background: white;
-      color: black;
-      border-color: white;
+      background: #fff;
+      color: #000;
+      border-color: #fff;
     }
 
     .message {
-      min-height: 20px;
-      margin-top: 18px;
+      min-height: 18px;
+
+      margin-top: 15px;
 
       color: rgba(255, 255, 255, 0.65);
+
       font-family: monospace;
       font-size: 11px;
-    }
 
-    .footer {
-      margin-top: 20px;
-      color: rgba(255, 255, 255, 0.35);
-      font-family: monospace;
-      font-size: 10px;
-      letter-spacing: 1px;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
+
+      body {
+        padding: 15px;
+      }
+
       .terminal {
         padding: 40px 25px;
       }
@@ -174,6 +199,7 @@
       h1 {
         letter-spacing: 6px;
       }
+
     }
   </style>
 </head>
@@ -184,14 +210,10 @@
 
     <div class="terminal">
 
-      <div class="small">
-        PERSONAL ARCHIVE
-      </div>
-
       <h1>MANUEL</h1>
 
       <div class="version">
-         v.30
+        v.30
       </div>
 
       <div class="date">
@@ -230,10 +252,6 @@
 
     </div>
 
-    <div class="footer">
-      SYSTEM STATUS: READY
-    </div>
-
   </div>
 
   <script>
@@ -244,14 +262,13 @@
       const message = document.getElementById("message");
 
       if (name.trim() === "" || code.trim() === "") {
+
         message.textContent = "> Please complete all fields.";
+
         return;
       }
 
       message.textContent = "> Access granted. Welcome.";
-
-      // Más adelante conectaremos este botón
-      // con la página principal de Manuel.
     }
   </script>
 

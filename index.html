@@ -224,19 +224,27 @@
   </div>
 
   <script>
-    function enterSite() {
+   function enterSite() {
 
-      const name = document.getElementById("name").value;
-      const code = document.getElementById("code").value;
-      const message = document.getElementById("message");
+  const name = document.getElementById("name").value;
+  const code = document.getElementById("code").value;
+  const message = document.getElementById("message");
 
-      if (name.trim() === "" || code.trim() === "") {
-        message.textContent = "> Please complete all fields.";
-        return;
-      }
+  if (name.trim() === "" || code.trim() === "") {
+    message.textContent = "> Please complete all fields.";
+    return;
+  }
 
-      message.textContent = "> Access granted. Welcome.";
-    }
+  if (name.trim().toLowerCase() === "manuel.30" && code === "padel30años") {
+    message.textContent = "> ACCESS GRANTED.";
+    
+    setTimeout(function() {
+      window.location.href = "home.html";
+    }, 700);
+
+  } else {
+    message.textContent = "> ACCESS DENIED.";
+  }
   </script>
 
 </body>

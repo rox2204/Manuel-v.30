@@ -124,6 +124,7 @@
     }
 
     .enter {
+      display: block;
       width: 100%;
       padding: 14px;
       margin-top: 5px;
@@ -211,7 +212,7 @@
           placeholder="••••••••"
         >
 
-        <button class="enter" onclick="enterSite()">
+        <button class="enter" type="button" onclick="enterSite()">
           [ ENTER ]
         </button>
 
@@ -224,27 +225,26 @@
   </div>
 
   <script>
-   function enterSite() {
+    function enterSite() {
 
-  const name = document.getElementById("name").value;
-  const code = document.getElementById("code").value;
-  const message = document.getElementById("message");
+      const name = document.getElementById("name").value.trim();
+      const code = document.getElementById("code").value;
+      const message = document.getElementById("message");
 
-  if (name.trim() === "" || code.trim() === "") {
-    message.textContent = "> Please complete all fields.";
-    return;
-  }
+      if (name === "manuel.30" && code === "padel30años") {
 
-  if (name.trim().toLowerCase() === "manuel.30" && code === "padel30años") {
-    message.textContent = "> ACCESS GRANTED.";
-    
-    setTimeout(function() {
-      window.location.href = "home.html";
-    }, 700);
+        message.textContent = "> ACCESS GRANTED.";
 
-  } else {
-    message.textContent = "> ACCESS DENIED.";
-  }
+        setTimeout(function() {
+          window.location.href = "./home.html";
+        }, 500);
+
+      } else {
+
+        message.textContent = "> ACCESS DENIED.";
+
+      }
+    }
   </script>
 
 </body>

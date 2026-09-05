@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MANUEL // v.30</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f4f3f0;
+      color: #151515;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      padding: 70px 30px 50px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .small {
+      font-family: monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #888;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 12vw, 110px);
+      font-weight: 400;
+      letter-spacing: 10px;
+      margin-bottom: 12px;
+    }
+
+    .version {
+      font-family: monospace;
+      color: #777;
+      font-size: 15px;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .intro {
+      max-width: 550px;
+      margin: auto;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .sections {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 25px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      min-height: 230px;
+
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+
+      padding: 35px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      text-decoration: none;
+      color: #151515;
+
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
+    .number {
+      font-family: monospace;
+      font-size: 11px;
+      color: #999;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .card h2 {
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: #999;
+      font-family: monospace;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 700px) {
+
+      .sections {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+      }
+
+      .card {
+        min-height: 190px;
+      }
+
+      h1 {
+        letter-spacing: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="small">
+      PERSONAL ARCHIVE
+    </div>
+
+    <h1>MANUEL</h1>
+
+    <div class="version">
+      v.30
+    </div>
+
+    <p class="intro">
+      30 años de historias, personas, viajes, momentos
+      y todas esas cosas que hacen que una vida sea una vida.
+    </p>
+
+  </header>
+
+
+  <main class="sections">
+
+    <a href="#" class="card">
+      <div class="number">01</div>
+      <h2>AMIGOS</h2>
+      <p>Los de siempre. Y los que se han ido sumando.</p>
+    </a>
+
+    <a href="#" class="card">
+      <div class="number">02</div>
+      <h2>UNIVERSIDAD</h2>
+      <p>Una época, muchas historias.</p>
+    </a>
+
+    <a href="#" class="card">
+      <div class="number">03</div>
+      <h2>FAMILIA</h2>
+      <p>Los que estaban antes de todo.</p>
+    </a>
+
+    <a href="#" class="card">
+      <div class="number">04</div>
+      <h2>TU GENTE</h2>
+      <p>Personas que también te han hecho suyo.</p>
+    </a>
+
+    <a href="#" class="card">
+      <div class="number">05</div>
+      <h2>MANUEL + TÚ</h2>
+      <p>Nosotros.</p>
+    </a>
+
+    <a href="#" class="card">
+      <div class="number">06</div>
+      <h2>MANUEL + REINA</h2>
+      <p>El equipo.</p>
+    </a>
+
+  </main>
+
+
+  <footer class="footer">
+    MANUEL // v.30<br>
+    15.08.1996 — 15.08.2026
+  </footer>
+
+</body>
+</html>

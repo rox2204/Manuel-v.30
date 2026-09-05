@@ -29,20 +29,15 @@
           rgba(0, 0, 0, 0.42),
           rgba(0, 0, 0, 0.42)
         ),
-        url("def71b1c-21f0-4749-a8be-adaf8b333e83.jpg");
+        url("0c6f8196-545b-4701-9db4-83c7b19c2494.jpg");
 
       background-size: cover;
-
-      /* AQUÍ centramos la foto */
       background-position: center center;
-
       background-repeat: no-repeat;
-      background-attachment: fixed;
 
       display: flex;
       align-items: center;
       justify-content: center;
-
       padding: 25px;
     }
 
@@ -70,26 +65,21 @@
       font-size: clamp(50px, 12vw, 85px);
       font-weight: 400;
       letter-spacing: 10px;
-
       margin-bottom: 12px;
     }
 
     .version {
       color: rgba(255, 255, 255, 0.65);
-
       font-family: monospace;
       font-size: 17px;
       letter-spacing: 3px;
-
       margin-bottom: 28px;
     }
 
     .date {
       color: rgba(255, 255, 255, 0.75);
-
       font-family: monospace;
       font-size: 13px;
-
       margin-bottom: 42px;
     }
 
@@ -97,46 +87,35 @@
       width: 100%;
       max-width: 350px;
       margin: 0 auto;
-
       text-align: left;
     }
 
     label {
       display: block;
-
       color: rgba(255, 255, 255, 0.60);
-
       font-family: monospace;
       font-size: 11px;
       letter-spacing: 2px;
-
       margin-bottom: 8px;
     }
 
     input {
       width: 100%;
-
       padding: 14px 15px;
       margin-bottom: 20px;
 
       background: rgba(255, 255, 255, 0.08);
-
       border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 7px;
 
       color: #fff;
-
       font-family: monospace;
       font-size: 14px;
-
       outline: none;
-
-      transition: 0.3s;
     }
 
     input:focus {
       border-color: rgba(255, 255, 255, 0.65);
-
       background: rgba(255, 255, 255, 0.12);
     }
 
@@ -146,24 +125,19 @@
 
     .enter {
       width: 100%;
-
       padding: 14px;
-
       margin-top: 5px;
 
       background: transparent;
-
       border: 1px solid rgba(255, 255, 255, 0.45);
       border-radius: 7px;
 
       color: #fff;
-
       font-family: monospace;
       font-size: 13px;
       letter-spacing: 2px;
 
       cursor: pointer;
-
       transition: all 0.3s ease;
     }
 
@@ -175,19 +149,15 @@
 
     .message {
       min-height: 18px;
-
       margin-top: 15px;
 
       color: rgba(255, 255, 255, 0.65);
-
       font-family: monospace;
       font-size: 11px;
-
       text-align: center;
     }
 
     @media (max-width: 600px) {
-
       body {
         padding: 15px;
       }
@@ -199,7 +169,6 @@
       h1 {
         letter-spacing: 6px;
       }
-
     }
   </style>
 </head>
@@ -262,9 +231,7 @@
       const message = document.getElementById("message");
 
       if (name.trim() === "" || code.trim() === "") {
-
         message.textContent = "> Please complete all fields.";
-
         return;
       }
 
